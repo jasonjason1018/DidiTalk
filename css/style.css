@@ -1,0 +1,225 @@
+/* 全局樣式 */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #f8f8f8;
+	color: #333;
+}
+
+/* 首頁樣式 */
+/*header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}*/
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+nav ul li {
+	margin-right: 20px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.latest-posts {
+	margin-bottom: 40px;
+}
+
+.latest-posts ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.latest-posts li {
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+
+.latest-posts h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.latest-posts p.date {
+	font-style: italic;
+	color: #999;
+	margin-top: 10px;
+}
+
+.top-users ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.top-users li {
+	margin-bottom: 10px;
+}
+
+.top-users li a {
+	color: #333;
+	text-decoration: none;
+}
+
+/*footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}*/
+
+header form {
+  display: flex;
+}
+
+header form input[type="search"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  width: 300px;
+}
+
+header form a {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #4CAF50;
+}
+
+header form {
+  display: flex;
+}
+
+header form input[type="search"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  width: 300px;
+}
+
+header form button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination li {
+  margin-right: 10px;
+}
+
+.pagination li:last-child {
+  margin-right: 0;
+}
+
+.pagination li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination li a:hover {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.pagination li a.active {
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: default;
+}
+
+.pagination li a.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
