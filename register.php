@@ -27,7 +27,7 @@
       </div>
       <div class="form-control">
         <label>性別:</label>
-        <span class="form-radio">
+        <span>
           <label><input type="radio" name="gender" value="male">男生</label>
           <label><input type="radio" name="gender" value="female">女生</label>
           <label><input type="radio" name="gender" value="other">其他</label>
@@ -46,8 +46,8 @@
       </div>
       <div class="form-control">
         <label for="confirm-password">確認密碼</label>
-        <input type="password" id="confirm-password" name="confirm-password" required>
-        <span id="confirm-passwordcolumn"></span>
+        <input type="password" id="confirmPassword" name="confirm-password" required>
+        <span id="confirmPasswordcolumn"></span>
       </div>
       <button type="button">註冊</button>
       <div class="form-control">
@@ -63,19 +63,13 @@
           $(this).attr("style", "").text("");
         }
     });
-    username = $("#username").val();
-    email = $("#email").val();
-    gender = $('input:radio:checked[name="gender"]').val() == undefined?'':$('input:radio:checked[name="gender"]').val();
-    nickname = $("#nickname").val();
-    password = $("#password").val();
-    confirmPassword = $("#confirm-password").val();
     arr = {
-      'username':username,
-      'email':email,
-      'gender':gender,
-      'nickname':nickname,
-      'password':password,
-      'confirmPassword':confirmPassword,
+      'username':$("#username").val(),
+      'email':$("#email").val(),
+      'gender':$('input:radio:checked[name="gender"]').val() == undefined?'':$('input:radio:checked[name="gender"]').val(),
+      'nickname':$("#nickname").val(),
+      'password':$("#password").val(),
+      'confirmPassword':$("#confirmPassword").val(),
     };
     registerFunction("registerSignUp", arr);
   });

@@ -47,5 +47,6 @@ function articleContentFunction(id){
 
 function registerFailedFunction(resp){
 	$("#" + resp["column"] + "column").attr("style", "color:red").text(resp["ERR_MSG"]);
+	$("#" + resp["column"]).val("");
 	return false;
 }

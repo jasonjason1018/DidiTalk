@@ -63,6 +63,12 @@
 		}
 
 		function registerSignUp(){
+			$arrReturn = array(
+				"MSG" => 1,
+				"ERR_MSG" => "",
+				"column" => "",
+				"DATA" => ""
+			);
 			$arr = $_POST['arr'];
 			$conn = $this->dbConnect();
 			foreach($arr as $k=>$v){
@@ -72,8 +78,16 @@
 					$arrReturn['column'] = $k;
 					break; 
 				}
-				$sql = "INSERT INTO member()VALUES()";
-
+				if($k == "confirmPassword"){
+					$checkPassword = $arr["password"] == $arr["confirmPassword"]?1:0;
+					if(!$checkPassword){
+						$arrReturn['MSG'] = 0;
+						$arrReturn['ERR_MSG'] = "密碼不一致";
+						$arrReturn['column'] = $k;
+						break; 		
+					}
+				}
+				//$sql = "INSERT INTO member()VALUES()";
 			}
 			echo json_encode($arrReturn);
 		}
